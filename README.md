@@ -1,5 +1,7 @@
-# Zephyr-Examples
-A repository of examples for Zephyr RTOS. The dev-board used here is ESP32-PICO-KIT.
+# Zephyr RTOS Examples
+A repository of examples for Zephyr RTOS. The dev-board used here is ESP32-PICO-KIT.  
+To build the examples, add these to a zephyr project workspace and run ```west build -p auto -b esp32``` within the app.  
+To flash the examples, run ```west flash```.  
 
 ## Examples
 - ### Switch (GPIO)
