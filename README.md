@@ -1,2 +1,10 @@
 # Zephyr-Examples
-A repository of examples for Zephyr RTOS. The dev-board used here is ESP32-PICO-KIT
+A repository of examples for Zephyr RTOS. The dev-board used here is ESP32-PICO-KIT.
+
+## Examples
+- ### Switch (GPIO)
+This example makes use of an LED and a switch. Every time the switch is pressed, the LED is toggled.
+- ### Switch (GPIO Interrupt)
+This example makes use of a switch. The microcontroller stays in a while loop. When a rising edge is detected, "Pressed" will be printed. 
+- ### Encoder (GPIO)
+This example makes use of an encoder. When the encoder is turned clockwise/anticlockwise, a counter will be incremented or decremented respectively.
