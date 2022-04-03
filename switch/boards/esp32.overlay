@@ -1,0 +1,21 @@
+/ {
+    aliases {
+        led = &ext_led;
+        sw = &ext_sw;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        ext_led: led0 {
+            gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
+        };
+    };
+
+    switches {
+        compatible = "gpio-keys";
+        ext_sw: sw0 {
+            gpios = <&gpio0 19 GPIO_ACTIVE_HIGH>;
+            label = "External Switch";
+        };
+    };
+};
