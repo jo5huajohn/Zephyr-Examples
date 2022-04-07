@@ -23,20 +23,11 @@ void main(void)
 
     while (1)
     {
-        aState = gpio_pin_get_dt(&e1_A);
+        aState = gpio_pin_get_dt(&e1_A);    /* Latest state */
 
         if (aState != aLastState)
         {
-            if (gpio_pin_get_dt(&e1_B) != aState)
-            {
-                cnt++;
-            }
-
-            else
-            {
-                cnt --;
-            }
-
+            (gpio_pin_get_dt(&e1_B) != aState) ? cnt++ : cnt--;
             printk("Counter: %d\n", cnt);
         }
     }
