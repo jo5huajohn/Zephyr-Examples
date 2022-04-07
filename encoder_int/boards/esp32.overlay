@@ -1,0 +1,20 @@
+/ {
+    aliases {
+        e1a = &clk;
+        e1b = &dt;
+    };
+
+    encoder {
+        compatible = "gpio-keys";
+
+        clk: clk {
+            gpios = <&gpio0 18 GPIO_ACTIVE_HIGH>;
+            label = "Encoder Output A";
+        };
+
+        dt: dt {
+            gpios = <&gpio0 19 GPIO_ACTIVE_HIGH>;
+            label = "Encoder Output B";
+        };
+    };
+};
