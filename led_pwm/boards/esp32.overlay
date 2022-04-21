@@ -1,0 +1,19 @@
+#include <dt-bindings/pwm/pwm.h>
+
+/ {
+    aliases {
+        pwmled = &pwmled;
+    };
+
+    pwmleds {
+        compatible = "pwm-leds";
+
+        pwmled: pwmled {
+            pwms = <&ledc0 18 100 PWM_POLARITY_NORMAL>;
+        };
+    };
+};
+
+&ledc0 {
+    status = "okay";
+};
